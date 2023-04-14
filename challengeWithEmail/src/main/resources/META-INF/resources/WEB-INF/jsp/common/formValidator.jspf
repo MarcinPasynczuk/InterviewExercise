@@ -1,0 +1,106 @@
+<script>
+$(document).ready(function() {
+    $.validator.addMethod("regex", function(value, element, regexpr) {
+        return regexpr.test(value);
+    }, "Please enter a valid input.");
+
+    $("#registrationForm").validate({
+        onkeyup: function(element) {
+          $(element).valid();
+        },
+        errorClass: "text-danger",
+        rules: {
+            title: {
+                required: true,
+                minlength: 2,
+                maxlength: 5
+            },
+            firstName: {
+                required: true,
+                minlength: 1,
+                maxlength: 50
+            },
+            lastName: {
+                required: true,
+                minlength: 1,
+                maxlength: 50
+            },
+            emailAddress: {
+                required: true,
+                email: true,
+                maxlength: 255
+            },
+            addressLine1: {
+                required: true,
+                minlength: 1,
+                maxlength: 255
+            },
+            addressLine2: {
+                maxlength: 255
+            },
+            city: {
+                maxlength: 255
+            },
+            postcode: {
+                required: true,
+                minlength: 1,
+                maxlength: 10,
+                regex: /^[0-9A-Za-z\s]+$/
+            },
+            phoneNumber: {
+                maxlength: 20,
+                regex: /^(?:\+\d{1,4})?\d{7,14}$/
+            }
+        },
+        messages: {
+            title: {
+                required: "This field is mandatory",
+                minlength: "This field must have at least 2 characters",
+                maxlength: "This field must have no more than 5 characters"
+            },
+            firstName: {
+                required: "This field is mandatory",
+                minlength: "This field must have at least 1 character",
+                maxlength: "This field must have no more than 50 characters"
+            },
+            lastName: {
+                required: "This field is mandatory",
+                minlength: "This field must have at least 1 character",
+                maxlength: "This field must have no more than 50 characters"
+            },
+            emailAddress: {
+                required: "This field is mandatory",
+                email: "Invalid email address",
+                maxlength: "This field must have no more than 255 characters"
+            },
+            addressLine1: {
+                required: "This field is mandatory",
+                minlength: "This field must have at least 1 character",
+                maxlength: "This field must have no more than 255 characters"
+            },
+            addressLine2: {
+                maxlength: "This field must have no more than 255 characters"
+            },
+            city: {
+                maxlength: "This field must have no more than 255 characters"
+            },
+            postcode: {
+                required: "This field is mandatory",
+                minlength: "This field must have at least 1 character",
+                maxlength: "This field must have no more than 10 characters",
+                regex: "Invalid postcode format"
+            },
+            phoneNumber: {
+                maxlength: "This field must have no more than 20 characters",
+                regex: "Invalid phone number format"
+            }
+        },
+        submitHandler: function (form) {
+            form.submit();
+          },
+        });
+    $("#registrationForm input").on("input", function () {
+        $(this).valid();
+    });
+});
+</script>
