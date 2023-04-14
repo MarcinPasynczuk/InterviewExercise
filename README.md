@@ -15,5 +15,3 @@ Registration form:
 
 Mail confirmation:
 ![image](https://user-images.githubusercontent.com/110817419/231925113-1b836658-a2cc-405a-a89b-4f7260f21147.png)
-
-To set it up, you will need to enter your username for db, password, email address and password in the application.properties file and adjust your email settings accordingly.
