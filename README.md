@@ -7,6 +7,8 @@ To set it up, you will need to enter your username for db, password, email addre
 
 ![image](https://user-images.githubusercontent.com/110817419/232008570-aa660c90-5df3-4d71-97c8-4403a3ab01e6.png)
 
+This is sql file:
+![image](https://user-images.githubusercontent.com/110817419/232023775-14cfae00-d515-4abc-b52a-ff3e9aadb436.png)
 
 Registration form:
 
