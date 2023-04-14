@@ -1,6 +1,6 @@
 # InterviewExercise
 
-"ChallengeSimple1" does not send emails after successful registration.
+"ChallengeSimple2" does not send emails after successful registration.
 "ChallengeMail" includes email functionality.
 
 To set it up, you will need to enter your username for db, password, email address and password in the application.properties file and adjust your email settings accordingly.
